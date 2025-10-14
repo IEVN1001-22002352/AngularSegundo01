@@ -1,0 +1,29 @@
+<div>
+  <h1>A POR B</h1>
+
+  <form [formGroup]="formularioAporB">
+    <div>
+      <label for="a">Número a:</label>
+      <input id="a" formControlName="a" type="number" />
+    </div>
+
+    <div>
+      <label for="b">Número b:</label>
+      <input id="b" formControlName="b" type="number" />
+    </div>
+
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" (click)="multiplicar()">
+      Multiplicar
+    </button>
+  </form>
+
+  <h2>Resultado: {{ resultadoAporB }}</h2>
+
+  <p *ngIf="pasos.length > 0">
+    Proceso:
+    <span *ngFor="let paso of pasos; let i = index">
+      {{ paso }}<span *ngIf="i < pasos.length - 1"> + </span>
+    </span>
+    = {{ resultadoAporB }}
+  </p>
+</div>
