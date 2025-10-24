@@ -1,15 +1,43 @@
-<div>
-    <h1>Multiplicar Números</h1>
-    <form [formGroup]="formulario">
-        <div>
-            <label for="numero1">Número 1:</label>
-            <input  id="numero1" formControlName="numero1" type="number"/>
-        </div>
-        <div>
-            <label for="numero2">Número 2:</label>
-            <input  id="numero2" formControlName="numero2" type="number"/>
-        </div>
-        <button type="button" class="btn btn-primary" (click)="multNumeros()">Multiplicar</button>
-            <h2>Resultado:{{resultado}}</h2>
-    </form>
+<div class="max-w-md mx-auto mt-10 p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+  <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Multiplicar Números</h1>
+
+  <form [formGroup]="formulario" class="space-y-4">
+    <div>
+      <label for="numero1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número 1:</label>
+      <input 
+        id="numero1" 
+        formControlName="numero1" 
+        type="number"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 
+               focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
+               dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+    </div>
+
+    <div>
+      <label for="numero2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número 2:</label>
+      <input 
+        id="numero2" 
+        formControlName="numero2" 
+        type="number"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 
+               focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
+               dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      />
+    </div>
+
+    <button 
+      type="button" 
+      (click)="multNumeros()"
+      class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
+             focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
+             dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >
+      Multiplicar
+    </button>
+
+    <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 text-center mt-4">
+      Resultado: {{ resultado }}
+    </h2>
+  </form>
 </div>

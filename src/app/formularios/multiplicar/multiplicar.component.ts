@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { fromIterable } from 'rxjs/internal/observable/innerFrom';
-import { NgIf } from "../../../../node_modules/@angular/common/common_module.d-NEF7UaHr";  
+import { CommonModule, NgIf } from "../../../../node_modules/@angular/common/common_module.d-NEF7UaHr";  
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-multiplicar',
